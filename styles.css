@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.dashboard-container{
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+
+}
+
+.menu-lateral{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    transform: translateX(-500px);
+    opacity: 0;
+    
+    transition: all 0.52s;
+    border: 1px solid red;
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+}
+
+
+.menu-lateral.active{
+    display: flex; 
+    transform: translateX(0px);
+    opacity: 1;
+    transition: all 0.52s;
+    position: relative;
+    
+}
+
+.menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menu-lateral nav a{
+   
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s ease;
+}
+
+.menu-lateral nav a:hover{
+    background-color:#9e6efe17;
+    color: #9E6EFE;
+    transition: 0.3s ease;
+}
+
+
+.menu-lateral nav a:hover svg path{
+    stroke:#9E6EFE;
+}
+
+
+.active-menu-lateral{
+    color: #9E6EFE;
+    background-color:#9e6efe17;
+}
+
+.active-menu-lateral svg path{
+    stroke:#9E6EFE;
+}
+
+body > section > div > nav > a:nth-child(4){
+    display: flex;
+    position: relative;
+    
+    
+}
+
+body > section > div > nav > a:nth-child(4):after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #F2F6FF;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+
+.menu-lateral nav .btn-desconectar:hover{
+    color: #F03D3D;
+    background-color:#ff00000f;
+}
+
+.menu-lateral nav .btn-desconectar:hover svg path{
+    stroke:#F03D3D;
+}
+
+
