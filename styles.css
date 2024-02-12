@@ -16,10 +16,72 @@ a{
     text-decoration: none;
 }
 
+
+.content{
+    max-width: 100%;
+    width: 100%;
+    background: #f3f4f8;
+
+}
+
+header{
+    border: 1px solid red;
+    display: flex;
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.open-menu{
+    border: none;
+}
+
+header  nav{
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.perfil-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+}
+
+
+
+
 .dashboard-container{
     max-width: 100vw;
     height: 100vh;
     display: flex;
+
+}
+
+.menu-lateral-container{
+    background: #00000063;
+    max-width: 0vw;
+    width: 100%;
+    position: absolute;
+    
+}
+
+.menu-lateral-container.active{
+    max-width: 100vw;
+    height: 100vh;
 
 }
 
@@ -49,6 +111,8 @@ a{
     position: relative;
     
 }
+
+
 
 .menu-lateral nav {
     display: flex;
@@ -100,6 +164,7 @@ body > section > div > nav > a:nth-child(4):after{
     background: #F2F6FF;
     position: absolute;
     bottom: 0px;
+    right: 0px;
 }
 
 
@@ -114,3 +179,19 @@ body > section > div > nav > a:nth-child(4):after{
 }
 
 
+.logo-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.logo-container button{
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    border: none;
+
+}
