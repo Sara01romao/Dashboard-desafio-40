@@ -171,9 +171,105 @@
             </nav>
              
         </header>
+
+        <div class="info-container">
+            <div class="grafico-card">
+
+                <h2>Gráfico de receitas</h2>
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="historico-card">
+                <h2>Histórico de transações</h2>
+                
+                <div class="historico-item">
+                    <div>
+                        <p>Ontem</p>
+                        <p>R$-540,32</p>
+                    </div>
+                    <div>
+                        <p>Quinta-Feira</p>
+                        <p>R$-273,90</p>
+                    </div>
+                    <div>
+                        <p>Segunda-Feira</p>
+                        <p>R$-1.456,20</p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
      </div>
 
    </section>
+
+
+   
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+  const ctx = document.getElementById('myChart');
+  
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out'],
+      datasets: [{
+        
+        data: [180, 250, 500, 1500, 1800, 2000, 400, 700, 900],
+        borderWidth: 0,
+        backgroundColor: '#e8dcff',
+        borderRadius: 6, 
+        
+      }],
+    },
+
+    options: {
+      scales: {
+        x: {
+          grid: {
+            display: false,
+          },
+
+          ticks: {
+            font: {
+              weight: 'bold',
+              size: 16 
+            }
+          }
+        },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            stepSize: 500, 
+            max: 2000, 
+            callback: function (value) {
+              return value === 0 ? value : value.toLocaleString(); 
+            },
+
+            font: {
+              weight: 'bold',
+              size: 16 
+            }
+          },
+
+          grid: {
+            display: false, 
+          }
+        },   
+      },
+
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+  </script>
 
 
 

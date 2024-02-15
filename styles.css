@@ -25,7 +25,6 @@ a{
 }
 
 header{
-    border: 1px solid red;
     display: flex;
     max-width: 1220px;
     width: 100%;
@@ -103,7 +102,6 @@ nav button{
     opacity: 0;
     
     transition: all 0.52s;
-    border: 1px solid red;
     position: absolute;
     z-index: 999;
     background: #fff;
@@ -234,4 +232,58 @@ body > section > div > nav > a:nth-child(4):after{
         order: 3;
     }
     
+}
+
+
+/* grafico */
+
+.info-container{
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+
+}
+
+.info-container h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.grafico-card{
+    flex: 1;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 12px;
+}
+
+.historico-card{
+    flex: 1;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 12px;
+}
+
+.historico-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.historico-item div{
+    display: flex;
+    justify-content: space-between;
+    background: #f9f7ff;
+    height: 50px;
+    align-items: center;
+    padding: 0px 14px;
+}
+
+
+.historico-card div p{
+    color: #9E6EFE;
+    font-weight: 500;
 }
