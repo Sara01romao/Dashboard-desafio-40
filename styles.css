@@ -389,3 +389,62 @@ body > section > div.content > div.cards-valores > div:nth-child(2) .cotacao{
     background: rgba(240, 61, 61, 0.06);
 }
 
+
+
+/*historico*/
+
+.historico-container{
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.historico-info{
+    background: #fff;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.historico-info h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.historico-info div{
+    overflow-x: auto;
+}
+
+.historico-info table{
+    width: 100%;
+}
+
+th, td {
+   
+    padding: 8px;
+    text-align: left;
+  }
+
+
+td {
+   
+    min-width: 180px;
+}
+
+
+table td:nth-child(6){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.tag-historico {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0BB07B;
+    display: block;
+}
