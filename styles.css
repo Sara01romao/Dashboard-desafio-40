@@ -82,7 +82,7 @@ nav button{
     background: #00000063;
     max-width: 0vw;
     width: 100%;
-    position: absolute;
+    position: fixed;
     
 }
 
@@ -447,4 +447,13 @@ table td:nth-child(6){
     border-radius: 50%;
     background-color: #0BB07B;
     display: block;
+}
+
+
+.tag-historico.aprovado{
+    background-color: #0BB07B;
+}
+
+.tag-historico.analise{
+    background-color: #FFCE52;
 }
