@@ -9,6 +9,8 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    background: #f3f4f8;
+    color: #272727;
 
 }
 
@@ -21,6 +23,7 @@ a{
     max-width: 100%;
     width: 100%;
     background: #f3f4f8;
+    height: 100%;
 
 }
 
@@ -74,6 +77,12 @@ header  nav{
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
+}
+
+.perfil-header:hover{
+    color: #9E6EFE;    
+    transition: all 0.3s ease 0s;
 }
 
 nav button{
@@ -230,7 +239,6 @@ body > section > div > nav > a:nth-child(4):after{
     .menu-lateral-container{
         width: initial;
         max-width: 100vw;
-        height: 100vh;
         position:initial;
         background:#f3f4f8;
     }
@@ -431,12 +439,17 @@ body > section > div.content > div.cards-valores > div:nth-child(2) .cotacao{
     border-radius: 12px;
 }
 
+.historico-table-info h2{
+    font-weight: 500;
+}
+
+
 .historico-table-info div{
     overflow-x: auto;
 }
 
 .historico-table-info div table{
-    min-width: 800px;
+    min-width: 600px;
     width: 100%;
     border-collapse: collapse;
 }
@@ -448,15 +461,27 @@ body > section > div.content > div.cards-valores > div:nth-child(2) .cotacao{
       
 }
 
+.historico-table-info div table tr{
+    height: 48px;
+  
+}
+
+tbody tr + tr{
+    border-top: 3px solid #F2F6FF;
+}
+
 .historico-table-info div table td{
     max-width: 250px;
     word-wrap: break-word;
+    padding: 0px 10px;
 }
+
 
 .historico-table-info div table td:has(.tag-historico){
     display: flex;
     align-items: center;
     gap: 10px;
+    height: 48px;
 }
 
 .tag-historico {
