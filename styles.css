@@ -37,8 +37,24 @@ header{
 }
 
 .open-menu{
+    
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: none;
     border: none;
     cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.open-menu:hover{
+    background: #dbcaff;
+    transition: 0.3s ease-in;
+    
+    
 }
 
 header  nav{
@@ -67,6 +83,12 @@ nav button{
     border: none;
     background: #fff;
     cursor: pointer;
+}
+
+nav button:hover{
+    
+    background: #dbcaff;
+    transition: 0.3s ease-in;
 }
 
 
@@ -238,6 +260,8 @@ body > section > div > nav > a:nth-child(4):after{
 }
 
 
+
+
 /* grafico */
 
 .info-container{
@@ -321,7 +345,7 @@ body > section > div > nav > a:nth-child(4):after{
     }
 
     .grafico-card{
-        overflow: scroll;
+        overflow-x: scroll;
     }
     
     
@@ -391,54 +415,48 @@ body > section > div.content > div.cards-valores > div:nth-child(2) .cotacao{
 
 
 
-/*historico*/
+/*historico table*/
 
-.historico-container{
+
+.historico-table-container{
     max-width: 1220px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-
 }
 
-.historico-info{
+.historico-table-info{
     background: #fff;
-    padding: 32px;
+    padding: 40px 20px;
     border-radius: 12px;
 }
 
-.historico-info h2{
-    font-weight: 500;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.historico-info div{
+.historico-table-info div{
     overflow-x: auto;
 }
 
-.historico-info table{
+.historico-table-info div table{
+    min-width: 800px;
     width: 100%;
+    border-collapse: collapse;
 }
 
-th, td {
+.historico-table-info div th {
    
     padding: 8px;
     text-align: left;
-  }
-
-
-td {
-   
-    min-width: 180px;
+      
 }
 
+.historico-table-info div table td{
+    max-width: 250px;
+    word-wrap: break-word;
+}
 
-table td:nth-child(6){
+.historico-table-info div table td:has(.tag-historico){
     display: flex;
     align-items: center;
     gap: 10px;
-
 }
 
 .tag-historico {
@@ -449,7 +467,6 @@ table td:nth-child(6){
     display: block;
 }
 
-
 .tag-historico.aprovado{
     background-color: #0BB07B;
 }
@@ -457,3 +474,4 @@ table td:nth-child(6){
 .tag-historico.analise{
     background-color: #FFCE52;
 }
+
